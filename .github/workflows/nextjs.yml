@@ -56,12 +56,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup pnpm
         if: steps.detect-package-manager.outputs.manager == 'pnpm'
         uses: pnpm/action-setup@v3
         with:
           version: 10
+          run_install: false
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -70,6 +70,15 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+      - name: Get pnpm store path
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
       - name: Restore cache
         uses: actions/cache@v4
         with:
