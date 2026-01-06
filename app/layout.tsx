@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: "Kevin Winardi",
     description: "Kevin Winardi portofolio website",
-    icons: '/images/web/profile.jpg'
+    icons: '/images/web/profile.jpg',
 };
 
 export default function RootLayout({
@@ -14,8 +14,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className="antialiased overflow-x-hidden">
-                <main className="flex justify-center px-4 lg:px-16">
+            <body className="antialiased">
+                <main className="flex justify-center px-4 lg:px-16 overflow-x-hidden">
                     {children}
                 </main>
             </body>
