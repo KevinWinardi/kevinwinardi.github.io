@@ -1,8 +1,8 @@
 import { ButtonLink } from "@/components/ButtonLink";
 
-export default function NotFound(){
+export default function NotFound() {
     return (
-        <div className="min-h-dvh flex flex-col justify-center items-center">
+        <div className="min-h-screen flex flex-col justify-center items-center">
             <h1 className="mb-4 text-8xl text-red-700 font-extrabold">404</h1>
             <h2 className="mb-12 text-2xl font-semibold">Not Found</h2>
             <ButtonLink

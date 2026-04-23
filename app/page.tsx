@@ -18,7 +18,7 @@ export default function Home() {
 
 function Jumbotron() {
     return (
-        <section className="min-h-dvh flex flex-col justify-center items-center">
+        <section className="min-h-screen flex flex-col justify-center items-center">
             <motion.h1
                 initial={{
                     opacity: 0,
@@ -99,7 +99,7 @@ function Jumbotron() {
 
 function About() {
     return (
-        <section className="min-h-dvh flex flex-col justify-center">
+        <section className="min-h-screen flex flex-col justify-center">
             <h2 className="mb-8 font-bold text-4xl text-center">About Me</h2>
             <motion.div
                 className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4"
@@ -138,7 +138,7 @@ function About() {
 
 function Projects() {
     return (
-        <section id="projects" className="min-h-dvh flex flex-col justify-center items-center">
+        <section id="projects" className="min-h-screen flex flex-col justify-center items-center">
             <h2 className="mb-8 font-bold text-4xl">Projects</h2>
 
             <div className="flex flex-col gap-8 mb-12">
