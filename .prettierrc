@@ -1,0 +1,10 @@
+{
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "tailwindStylesheet": "./app/globals.css",
+    "tailwindAttributes": ["className", "customClass"],
+    "tailwindFunctions": ["clsx"],
+    "tabWidth": 4,
+    "printWidth": 100,
+    "singleQuote": true,
+    "jsxSingleQuote": false
+}

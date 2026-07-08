@@ -1,40 +1,22 @@
-import Link from "next/link";
-import { JSX } from "react";
+import Link from 'next/link';
+import React from 'react';
 
 interface ButtonLinkProps {
-    href: string,
-    text: string,
-    newTab: boolean,
-    iconFirst: boolean,
-    icon: JSX.Element,
+    href: string;
+    title: string;
+    newTab: boolean;
+    children: React.ReactNode;
 }
 
-export function ButtonLink({ href, text, newTab, iconFirst, icon }: ButtonLinkProps) {
+export function ButtonLink({ href, title, newTab, children }: ButtonLinkProps) {
     return (
         <Link
             href={href}
             target={newTab ? '_blank' : '_self'}
-            className="
-                    flex gap-2 w-max p-2 rounded shadow-md border-2 border-b-6 border-b-black font-semibold 
-                    transition duration-500 hover:opacity-75 hover:border-transparent hover:translate-y-1
-                "
+            title={title}
+            className="flex w-max gap-2 rounded border-2 border-b-6 border-b-black p-2 font-semibold shadow-md transition duration-500 hover:translate-y-1 hover:border-transparent hover:opacity-75"
         >
-            {
-                iconFirst
-                    ?
-                    (
-                        <>
-                            {icon}
-                            <span>{text}</span>
-                        </>
-                    ) :
-                    (
-                        <>
-                            <span>{text}</span>
-                            {icon}
-                        </>
-                    )
-            }
+            {children}
         </Link>
     );
 }

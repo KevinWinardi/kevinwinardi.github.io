@@ -1,27 +1,28 @@
 export interface ProjectType {
-    id: string,
-    name: string,
-    description: string,
-    keyFeatures: string[],
-    techStacks: string[],
-    screenshots: { nameFile: string, description: string }[],
-    urlDeploy?: string,
-    repoGitHub?: string,
-    isFeatured: boolean,
+    id: string;
+    name: string;
+    description: string;
+    keyFeatures: string[];
+    techStacks: string[];
+    screenshots: { nameFile: string; description: string }[];
+    urlDeploy?: string;
+    repoGitHub?: string;
+    isFeatured: boolean;
 }
 
 export const projects: ProjectType[] = [
     {
         id: 'asl-detect',
         name: 'ASL Detect',
-        description: 'ASL Detect is a machine learning web app related to computer vision. It aims to predict ASL hand gestures using Mediapipe to capture 21 hand coordinates and train a model directly in the browser using TensorFlow.js.',
+        description:
+            'ASL Detect is a machine learning web app related to computer vision. It aims to predict ASL hand gestures using Mediapipe to capture 21 hand coordinates and train a model directly in the browser using TensorFlow.js.',
         keyFeatures: [
             'Generate dataset',
             'Training custom model',
             'Realtime detection',
             'Installable and offline mode',
             'Support two language, Indonesian and English',
-            'Interactive visual chart'
+            'Interactive visual chart',
         ],
         techStacks: [
             'tensorflow-js',
@@ -78,20 +79,15 @@ export const projects: ProjectType[] = [
     {
         id: 'royal-islamic-school',
         name: 'Royal Islamic School',
-        description: 'The school website for Royal Islamic School is a result of the Regional Higher Education Service Institution 2 (LLDIKTI Region 2) internship program. The website is designed to help the school promote its identity and strengthen its branding. A dedicated private admin dashboard is designed to simplify manage displayed content such as achievements, events, information, teachers, galleries, etc.',
+        description:
+            'The school website for Royal Islamic School is a result of the Regional Higher Education Service Institution 2 (LLDIKTI Region 2) internship program. The website is designed to help the school promote its identity and strengthen its branding. A dedicated private admin dashboard is designed to simplify manage displayed content such as achievements, events, information, teachers, galleries, etc.',
         keyFeatures: [
             'Identity school such as vision mission, academic, teacher, and more',
             'Integrate Instagram and YouTube embed video',
             'Dashboard admin to manage content',
             'Events and information like a blog',
         ],
-        techStacks: [
-            'laravel',
-            'filament',
-            'tailwind-css',
-            'alpine-js',
-            'mysql',
-        ],
+        techStacks: ['laravel', 'filament', 'tailwind-css', 'alpine-js', 'mysql'],
         screenshots: [
             {
                 nameFile: 'image-1.jpg',
@@ -124,7 +120,8 @@ export const projects: ProjectType[] = [
     {
         id: 'notepadly',
         name: 'Notepadly',
-        description: 'Notepadly is a simple web application for managing notes efficiently. It offers a clean interface with essential features to enhance note-taking experience. This project uses the public Notes API provided by Dicoding: https://notes-api.dicoding.dev/v1.',
+        description:
+            'Notepadly is a simple web application for managing notes efficiently. It offers a clean interface with essential features to enhance note-taking experience. This project uses the public Notes API provided by Dicoding: https://notes-api.dicoding.dev/v1.',
         keyFeatures: [
             'User authentication (Login & Register)',
             'Single Page Application(SPA) for smooth navigation',
@@ -173,20 +170,17 @@ export const projects: ProjectType[] = [
     {
         id: 'elisa-thrift-shop-import',
         name: 'Elisa Thrift Shop Import',
-        description: 'A business profile website for Elisa\'s shop, a thrifting clothing store. This project was carried out by four people: myself Kevin Winardi, William Liu, I Komang Darmawan, and Johannes. I was responsible for developing the admin dashboard and integrating it with the database model, including deployment.',
+        description:
+            "A business profile website for Elisa's shop, a thrifting clothing store. This project was carried out by four people: myself Kevin Winardi, William Liu, I Komang Darmawan, and Johannes. I was responsible for developing the admin dashboard and integrating it with the database model, including deployment.",
         keyFeatures: [
             'Information profile bussiness',
             'Display product with custom filter',
             'Login and register with email verification OTP',
             'Support forgot password by email',
             'Cart and favorite product',
-            'Dashboard admin to manage categories, products, users, and identity website'
+            'Dashboard admin to manage categories, products, users, and identity website',
         ],
-        techStacks: [
-            'laravel',
-            'mysql',
-            'bootstrap',
-        ],
+        techStacks: ['laravel', 'mysql', 'bootstrap'],
         screenshots: [
             {
                 nameFile: 'image-1.jpg',
@@ -223,7 +217,8 @@ export const projects: ProjectType[] = [
     {
         id: 'say-quotes',
         name: 'Say Quotes',
-        description: 'Say Quotes is a motivational quotes website that inspires life with quotes from various figures.',
+        description:
+            'Say Quotes is a motivational quotes website that inspires life with quotes from various figures.',
         keyFeatures: [
             'Display random quotes',
             '35 different themes available to customize the look',
@@ -231,13 +226,7 @@ export const projects: ProjectType[] = [
             'Share quotes easily with social share buttons',
             'Download quotes as images to save or share offline',
         ],
-        techStacks: [
-            'react',
-            'daisy-ui',
-            'tailwind-css',
-            'vite',
-            'firebase',
-        ],
+        techStacks: ['react', 'daisy-ui', 'tailwind-css', 'vite', 'firebase'],
         screenshots: [
             {
                 nameFile: 'image-1.jpg',
@@ -263,5 +252,5 @@ export const projects: ProjectType[] = [
         isFeatured: false,
         repoGitHub: 'https://github.com/KevinWinardi/say-quotes',
         urlDeploy: 'https://sayquotes.web.app',
-    }
+    },
 ];

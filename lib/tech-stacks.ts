@@ -1,7 +1,7 @@
 interface TechStacksType {
-    id: string,
-    name: string,
-};
+    id: string;
+    name: string;
+}
 
 export const techStacks: TechStacksType[] = [
     {
@@ -30,7 +30,7 @@ export const techStacks: TechStacksType[] = [
     },
     {
         id: 'mediapipe',
-        name: 'Mediapipe'
+        name: 'Mediapipe',
     },
     {
         id: 'firebase',
