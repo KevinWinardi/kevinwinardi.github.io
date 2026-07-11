@@ -1,0 +1,79 @@
+---
+title: Notepadly
+slug: notepadly
+description: Simple notes app for managing notes efficiently.
+thumbnail: image-1.jpg
+keywords: ['website', 'notes', 'api', 'react']
+techStacks: ['React', 'React Router DOM', 'TypeScript', 'Tailwind CSS', 'Vite']
+isFeatured: true
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+import { ArrowUpRightIcon } from '@/components/icons/ArrowUpRightIcon';
+import { GitHubIcon } from '@/components/icons/GitHubIcon';
+
+# {frontmatter.title}
+
+## Description
+
+Notepadly is a simple web application for managing notes efficiently. It offers a clean interface with essential features to enhance note-taking experience. This project uses the public Notes API provided by Dicoding: https://notes-api.dicoding.dev/v1.
+
+## Key Features
+
+- User authentication (Login & Register)
+- Single Page Application(SPA) for smooth navigation
+- Light and dark theme support
+- Localization in two languages: English and Indonesian
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        {
+            fileName: 'image-1.jpg',
+            description: 'Home page in light mode',
+        },
+        {
+            fileName: 'image-2.jpg',
+            description: 'Home page in dark mode',
+        },
+        {
+            fileName: 'image-3.jpg',
+            description: 'Create note page with Indonesian language',
+        },
+        {
+            fileName: 'image-4.jpg',
+            description: 'Detail note page',
+        },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Register page',
+        },
+        {
+            fileName: 'image-6.jpg',
+            description: 'Login page',
+        },
+    ]}
+
+/>
+
+## External Links
+
+<div className='flex gap-4'>
+    <Button href="https://notepadly.web.app" newTab={true} title="Live Website">
+        <span>Live Website</span>
+        <ArrowUpRightIcon />
+    </Button>
+
+    <Button href="https://github.com/KevinWinardi/notepadly" newTab={true} title="GitHub Repo">
+        <span>GitHub Repo</span>
+        <GitHubIcon />
+    </Button>
+</div>

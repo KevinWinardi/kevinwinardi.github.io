@@ -1,0 +1,68 @@
+---
+title: Elisa Thrift Shop Import
+slug: elisa-thrift-shop-import
+description: Business profile website for thrifting clothing store
+thumbnail: image-1.jpg
+keywords: ['website', 'shop', 'laravel']
+techStacks: ['Laravel', 'MySQL', 'Bootstrap', 'jQuery']
+isFeatured: false
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+
+# {frontmatter.title}
+
+## Description
+
+A business profile website for Elisa's shop, a thrifting clothing store. This project was carried out by four people: myself Kevin Winardi, William Liu, I Komang Darmawan, and Johannes. I was responsible for developing the admin dashboard and integrating it with the database model, including deployment.
+
+## Key Features
+
+- Information profile bussiness
+- Display product with custom filter
+- Login and register with email verification OTP
+- Support forgot password by email
+- Cart and favorite product
+- Dashboard admin to manage categories, products, users, and identity website
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        {
+            fileName: 'image-1.jpg',
+            description: 'Jumbotron',
+        },
+        {
+            fileName: 'image-2.jpg',
+            description: 'Product page',
+        },
+        {
+            fileName: 'image-3.jpg',
+            description: 'Tutorial order page',
+        },
+        {
+            fileName: 'image-4.jpg',
+            description: 'Email verification for register account',
+        },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Favorite page',
+        },
+        {
+            fileName: 'image-6.jpg',
+            description: 'Dashboard summary',
+        },
+        {
+            fileName: 'image-7.jpg',
+            description: 'Dashboard product',
+        },
+    ]}
+/>

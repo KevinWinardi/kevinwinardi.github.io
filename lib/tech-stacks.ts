@@ -1,75 +1,88 @@
-interface TechStacksType {
-    id: string;
-    name: string;
-}
+import type { TechStacks } from '@/types/TechStacks';
 
-export const techStacks: TechStacksType[] = [
+export const techStacks: TechStacks = [
     {
-        id: 'laravel',
+        slug: 'laravel',
         name: 'Laravel',
     },
     {
-        id: 'tailwind-css',
+        slug: 'tailwind-css',
         name: 'Tailwind CSS',
     },
     {
-        id: 'alpine-js',
+        slug: 'alpine-js',
         name: 'Alpine.js',
     },
     {
-        id: 'filament',
+        slug: 'filament',
         name: 'Filament',
     },
     {
-        id: 'mysql',
+        slug: 'mysql',
         name: 'MySQL',
     },
     {
-        id: 'react',
+        slug: 'react',
         name: 'React',
     },
     {
-        id: 'mediapipe',
-        name: 'Mediapipe',
+        slug: 'mediapipe',
+        name: 'MediaPipe',
     },
     {
-        id: 'firebase',
+        slug: 'firebase',
         name: 'Firebase',
     },
     {
-        id: 'chart-js',
+        slug: 'chart-js',
         name: 'Chart.js',
     },
     {
-        id: 'tensorflow-js',
+        slug: 'tensorflow-js',
         name: 'TensorFlow.js',
     },
     {
-        id: 'sweetalert2',
+        slug: 'sweetalert2',
         name: 'SweetAlert2',
     },
     {
-        id: 'typescript',
+        slug: 'typescript',
         name: 'TypeScript',
     },
     {
-        id: 'daisy-ui',
+        slug: 'daisy-ui',
         name: 'Daisy UI',
     },
     {
-        id: 'typescript',
-        name: 'TypeScript',
-    },
-    {
-        id: 'bootstrap',
+        slug: 'bootstrap',
         name: 'Bootstrap',
     },
     {
-        id: 'react-router-dom',
-        name: 'React Router Dom',
+        slug: 'react-router-dom',
+        name: 'React Router DOM',
     },
     {
-        id: 'vite',
+        slug: 'vite',
         name: 'Vite',
+    },
+    {
+        slug: 'motion',
+        name: 'Motion',
+    },
+    {
+        slug: 'jquery',
+        name: 'jQuery',
+    },
+    {
+        slug: 'livewire',
+        name: 'Livewire',
+    },
+    {
+        slug: 'mdx',
+        name: 'MDX',
+    },
+    {
+        slug: 'next-js',
+        name: 'Next.js',
     },
 ];

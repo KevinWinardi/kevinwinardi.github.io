@@ -1,0 +1,74 @@
+---
+title: Royal Islamic School
+slug: royal-islamic-school
+description: Royal Islamic School profile website to showcase its identity.
+thumbnail: image-1.jpg
+keywords: ['website', 'school profile', 'laravel', 'filament']
+techStacks: ['Laravel', 'Filament', 'Tailwind CSS', 'Alpine.js', 'MySQL']
+isFeatured: true
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+import { ArrowUpRightIcon } from '@/components/icons/ArrowUpRightIcon';
+
+# {frontmatter.title}
+
+## Description
+
+The school website for Royal Islamic School is a result of the Regional Higher Education Service Institution 2 (LLDIKTI Region 2) internship program. The website is designed to help the school promote its identity and strengthen its branding. A dedicated private admin dashboard is designed to simplify manage displayed content such as achievements, events, information, teachers, galleries, etc.
+
+## Key Features
+
+- Identity school such as vision mission, academic, teacher, and more
+- Integrate Instagram and YouTube embed video
+- Dashboard admin to manage content
+- Events and information like a blog
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        {
+            fileName: 'image-1.jpg',
+            description: 'Jumbotron',
+        },
+        {
+            fileName: 'image-2.jpg',
+            description: 'FAQ section',
+        },
+        {
+            fileName: 'image-3.jpg',
+            description: 'Vision and mission page',
+        },
+        {
+            fileName: 'image-4.jpg',
+            description: 'Facility page',
+        },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Gallery photo page',
+        },
+        {
+            fileName: 'image-6.jpg',
+            description: 'Gallery video page',
+        },
+    ]}
+/>
+<span className="text-red-500 italic">
+    *There are several pages containing private information, so they were not included in the
+    screenshots.
+</span>
+
+## External Links
+
+<Button href="https://royalislamic.sch.id" newTab={true} title="Live Website">
+    <span>Live Website</span>
+    <ArrowUpRightIcon />
+</Button>

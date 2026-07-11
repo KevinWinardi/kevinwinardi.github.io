@@ -1,0 +1,55 @@
+---
+title: UKMC Computer Laboratory 
+slug: ukmc-computer-laboratory
+description: Information system UKMC computer laboratory
+thumbnail: image-1.jpg
+keywords: ['website', 'information system', 'laravel']
+techStacks: ['Laravel', 'Filament', 'Tailwind CSS', 'Alpine.js', 'MySQL']
+isFeatured: true
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+
+# {frontmatter.title}
+
+## Description
+
+The UKMC computer laboratory information system was initiated by Klaudius Jevanda B. S., S.Kom., M.T., to help manage computer laboratory data. I served as the web developer for the admin panel, while my colleague Johannes handled the user interface.
+
+## Key Features
+
+- Laboratory usage schedule
+- PDF report generator
+- Support form for laboratory usage requests or other issues
+- Roles and permissions differ for laboratory manager, dean, and head of study program
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        { fileName: 'image-1.jpg', description: 'Jumbotron' },
+        { fileName: 'image-2.jpg', description: 'Vision, mission, and objectives' },
+        { fileName: 'image-3.jpg', description: 'Laboratory usage schedule' },
+        { fileName: 'image-4.jpg', description: 'Summary of equipment and condition' },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Research and community service utilizing the laboratory',
+        },
+        {
+            fileName: 'image-6.jpg',
+            description: 'PDF report page',
+        },
+    ]}
+/>
+
+<span className="text-red-500 italic">
+    *There are several pages containing private information, so they were not included in the
+    screenshots.
+</span>

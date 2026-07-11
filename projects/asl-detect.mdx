@@ -1,0 +1,63 @@
+---
+title: ASL Detect
+slug: asl-detect
+description: A web-based machine learning application that enables everything from dataset creation and model training to detection to be performed entirely within the browser.
+thumbnail: image-1.jpg
+keywords: ['website', 'machine learning', 'sign language', 'tensorFlow.js', 'mediapipe']
+techStacks: ['TensorFlow.js', 'MediaPipe', 'React', 'Tailwind CSS', 'Chart.js', 'TypeScript']
+isFeatured: true
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+import { ArrowUpRightIcon } from '@/components/icons/ArrowUpRightIcon';
+
+# {frontmatter.title}
+
+## Description
+
+ASL Detect is a machine learning web app related to computer vision. It aims to predict ASL hand gestures using Mediapipe to capture 21 hand coordinates and train a model directly in the browser using TensorFlow.js.
+
+## Key Features
+
+- Generate dataset
+- Training custom model
+- Realtime detection
+- Installable and offline mode
+- Support two language, Indonesian and English
+- Interactive visual chart
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        { fileName: 'image-1.jpg', description: 'Jumbotron' },
+        { fileName: 'image-2.jpg', description: 'Generate data process' },
+        { fileName: 'image-3.jpg', description: 'Training model first step for upload data' },
+        { fileName: 'image-4.jpg', description: 'Training model second step for split data' },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Training model third step for customize sequential model',
+        },
+        {
+            fileName: 'image-6.jpg',
+            description: 'Training model forth step for customize compile model',
+        },
+        { fileName: 'image-7.jpg', description: 'Training model last step for training process' },
+        { fileName: 'image-8.jpg', description: 'Evaluation model with graphic accuracy and loss' },
+        { fileName: 'image-9.jpg', description: 'Detection process' },
+    ]}
+/>
+
+## External Links
+
+<Button href="https://asldetect.web.app" newTab={true} title="Live Website">
+    <span>Live Website</span>
+    <ArrowUpRightIcon />
+</Button>

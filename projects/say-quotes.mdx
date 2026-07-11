@@ -1,0 +1,75 @@
+---
+title: Say Quotes
+slug: say-quotes
+description: Simple web app for motivational quotes that inspire life
+thumbnail: image-1.jpg
+keywords: ['website', 'quotes', 'react']
+techStacks: ['React', 'Daisy UI', 'Tailwind CSS', 'Vite']
+isFeatured: false
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+import { ArrowUpRightIcon } from '@/components/icons/ArrowUpRightIcon';
+import { GitHubIcon } from '@/components/icons/GitHubIcon';
+
+# {frontmatter.title}
+
+## Description
+
+Say Quotes is a motivational quotes website that inspires life with quotes from various figures.
+
+## Key Features
+
+- Display random quotes
+- 35 different themes available to customize the look
+- Customize background with random images from Lorem Picsum (https://picsum.photos) or upload own image from local device
+- Share quotes easily with social share buttons
+- Download quotes as images to save or share offline
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        {
+            fileName: 'image-1.jpg',
+            description: 'Light theme with custom opacity card',
+        },
+        {
+            fileName: 'image-2.jpg',
+            description: 'Caramellate theme with custom opacity card',
+        },
+        {
+            fileName: 'image-3.jpg',
+            description: 'Setting theme',
+        },
+        {
+            fileName: 'image-4.jpg',
+            description: 'Setting background and opacity card',
+        },
+        {
+            fileName: 'image-5.jpg',
+            description: 'Hide control button mode',
+        },
+    ]}
+/>
+
+## External Links
+
+<div className='flex gap-4'>
+    <Button href="https://sayquotes.web.app" newTab={true} title="Live Website">
+        <span>Live Website</span>
+        <ArrowUpRightIcon />
+    </Button>
+
+    <Button href="https://github.com/KevinWinardi/say-quotes" newTab={true} title="GitHub Repo">
+        <span>GitHub Repo</span>
+        <GitHubIcon />
+    </Button>
+</div>

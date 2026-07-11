@@ -1,29 +1,39 @@
-'use client';
+import type { Metadata } from 'next';
 
-import { ButtonLink } from '@/components/ButtonLink';
+import { Button } from '@/components/Button';
+import { ProjectCardListItem } from '@/components/ProjectCardListItem';
 import { ArrowLeftIcon } from '@/components/icons/ArrowLeftIcon';
-import { ProjectCard } from '@/components/ProjectCard';
-import { projects } from '@/lib/projects';
 
-export default function Projects() {
+import { getProjectsFrontmatter } from '@/lib/project-frontmatter';
+
+export const metadata: Metadata = {
+    title: 'Projects',
+    description: 'Projects completed by Kevin Winardi',
+    openGraph: {
+        title: 'Projects',
+        description: 'Projects completed by Kevin Winardi',
+    },
+};
+
+export default function Page() {
+    const projects = getProjectsFrontmatter();
+
     return (
-        <>
-            <div className="flex w-full max-w-7xl flex-col py-8">
-                <ButtonLink href={'/'} title="Back" newTab={false}>
-                    <ArrowLeftIcon />
-                    <span>Back</span>
-                </ButtonLink>
+        <section className="mx-auto flex w-full max-w-5xl flex-col p-4 lg:px-8">
+            <Button href="/" title="Back" newTab={false}>
+                <ArrowLeftIcon />
+                <span>Back</span>
+            </Button>
 
-                <hr className="mt-4 mb-8" />
+            <hr className="mt-4 mb-8" />
 
-                <h1 className="mb-4 text-4xl font-extrabold">Projects</h1>
+            <h1 className="mb-4 text-4xl font-extrabold">Projects</h1>
 
-                <div className="flex w-full flex-col gap-8">
-                    {projects.map((project, i) => (
-                        <ProjectCard key={project.id} project={project} i={i} />
-                    ))}
-                </div>
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                {projects.map((project, i) => (
+                    <ProjectCardListItem key={project.slug} project={project} i={i} />
+                ))}
             </div>
-        </>
+        </section>
     );
 }

@@ -1,0 +1,56 @@
+---
+title: Kevin Winardi Portofolio
+slug: kevin-winardi-portofolio
+description: Kevin Winardi portofolio website
+thumbnail: image-1.jpg
+keywords: ['website', 'portofolio', 'responsive']
+techStacks: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX', 'Motion']
+isFeatured: false
+---
+
+import { Button } from '@/components/Button';
+import { TechStackCard } from '@/components/TechStackCard';
+import { ScreenshotGrid } from '@/components/ScreenshotGrid';
+import { ArrowUpRightIcon } from '@/components/icons/ArrowUpRightIcon';
+import { GitHubIcon } from '@/components/icons/GitHubIcon';
+
+# {frontmatter.title}
+
+## Description
+
+A modern and responsive portfolio website designed to showcase projects that have been created.
+
+## Key Features
+
+- SEO first
+- Showcasing projects built using MDX as a content management system.
+- Responsive and seamless animation
+
+## Tech Stacks
+
+<TechStackCard techStacks={frontmatter.techStacks} />
+
+## Screenshots
+
+<ScreenshotGrid
+    project={frontmatter.slug}
+    screenshots={[
+        { fileName: 'image-1.jpg', description: 'Jumbotron' },
+        { fileName: 'image-2.jpg', description: 'Projects page' },
+        { fileName: 'image-3.jpg', description: 'Detail project page' },
+    ]}
+/>
+
+## External Links
+
+<div className='flex gap-4'>
+    <Button href="https://kevinwinardi.github.io" newTab={true} title="Live Website">
+        <span>Live Website</span>
+        <ArrowUpRightIcon />
+    </Button>
+
+    <Button href="https://github.com/KevinWinardi/kevinwinardi.github.io" newTab={true} title="GitHub Repo">
+        <span>GitHub Repo</span>
+        <GitHubIcon />
+    </Button>
+</div>

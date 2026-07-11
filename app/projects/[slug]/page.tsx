@@ -1,20 +1,18 @@
-import { projects } from '@/lib/projects';
-import { notFound } from 'next/navigation';
-import ProjectDetailContent from './_pageContent';
+import { getProjectsFrontmatter } from '@/lib/project-frontmatter';
 
-export const dynamicParams = false;
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const { default: Project } = await import(`@/projects/${slug}.mdx`);
 
-export async function generateStaticParams() {
+    return <Project />;
+}
+
+export function generateStaticParams() {
+    const projects = getProjectsFrontmatter();
+
     return projects.map((project) => ({
-        slug: project.id,
+        slug: project.slug,
     }));
 }
 
-export default async function ProjectDetail({ params }: { params: { slug: string } }) {
-    const { slug } = await params;
-    const project = projects.find((p) => p.id === slug);
-
-    if (!project) return notFound();
-
-    return <ProjectDetailContent project={project} />;
-}
+export const dynamicParams = false;
