@@ -36,6 +36,7 @@ export function Jumbotron() {
                         title="Profile"
                         fill
                         sizes="(max-width: 1024px) 32px 32px, 64px 64px"
+                        loading='eager'
                     />
                 </motion.div>
 
