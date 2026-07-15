@@ -26,7 +26,7 @@ function getProjectsFrontmatter(amount?: number) {
             ...frontMatter,
         };
     });
-    projects.sort((a, b) => Number(b.isFeatured) - Number(a.isFeatured));
+    projects.sort((a, b) => Number(b.is_featured) - Number(a.is_featured));
 
     if (typeof amount === 'number') {
         projects = projects.slice(0, amount);

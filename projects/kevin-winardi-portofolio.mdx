@@ -3,9 +3,15 @@ title: Kevin Winardi Portofolio
 slug: kevin-winardi-portofolio
 description: Kevin Winardi portofolio website
 thumbnail: image-1.jpg
-keywords: ['website', 'portofolio', 'responsive']
-techStacks: ['Next.js', 'TypeScript', 'Tailwind CSS', 'MDX', 'Motion']
-isFeatured: false
+categories: 
+    - Portofolio Website
+tags: 
+    - Next.js
+    - TypeScript
+    - Tailwind CSS
+    - MDX
+    - Motion
+is_featured: false
 ---
 
 import { Button } from '@/components/Button';
@@ -28,7 +34,7 @@ A modern and responsive portfolio website designed to showcase projects that hav
 
 ## Tech Stacks
 
-<TechStackCard techStacks={frontmatter.techStacks} />
+<TechStackCard techStacks={frontmatter.tags} />
 
 ## Screenshots
 
@@ -53,4 +59,5 @@ A modern and responsive portfolio website designed to showcase projects that hav
         <span>GitHub Repo</span>
         <GitHubIcon />
     </Button>
+
 </div>

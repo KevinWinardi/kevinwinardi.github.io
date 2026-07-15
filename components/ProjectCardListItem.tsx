@@ -41,7 +41,7 @@ export function ProjectCardListItem({ project, i }: { project: ProjectFrontMatte
             <div className="p-4">
                 <h3 className="mb-2 text-2xl font-bold">{project.title}</h3>
 
-                <TechStackCard techStacks={project.techStacks} />
+                <TechStackCard techStacks={project.tags} />
 
                 <Button href={`projects/${project.slug}`} title="Detail" newTab={false}>
                     <span>Detail</span>

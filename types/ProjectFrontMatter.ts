@@ -5,7 +5,7 @@ export type ProjectFrontMatter = {
     title: string;
     description: string;
     thumbnail: string;
-    techStacks: TechStacks[number]['slug'][];
-    keywords: string[];
-    isFeatured: boolean;
+    categories: string[];
+    tags: TechStacks[number]['slug'][];
+    is_featured: boolean;
 };

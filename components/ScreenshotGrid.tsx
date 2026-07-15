@@ -10,9 +10,9 @@ type ScreenshotGridType = {
     screenshots: { fileName: string; description: string }[];
 };
 
-export function ScreenshotGrid({ project, screenshots }: ScreenshotGridType) {
-    const MotionImage = motion.create(Image);
+const MotionImage = motion.create(Image);
 
+export function ScreenshotGrid({ project, screenshots }: ScreenshotGridType) {
     const [selected, setSelected] = useState<{
         fileName: string;
         description: string;
